@@ -93,27 +93,27 @@
         },
         "post": {
           "tags": [
-            "pet"
+            "client"
           ],
-          "summary": "Add a new pet to the store",
-          "description": "Add a new pet to the store",
-          "operationId": "addPet",
+          "summary": "Ajout d'un client dans la base de données",
+          "description": "Ajout d'un client dans la base de données",
+          "operationId": "addclient",
           "requestBody": {
-            "description": "Create a new pet in the store",
+            "description": "Creation d'un nouveau client dans la base de données",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "$ref": "#/components/schemas/Client"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "$ref": "#/components/schemas/Client"
                 }
               },
               "application/x-www-form-urlencoded": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "$ref": "#/components/schemas/Client"
                 }
               }
             },
@@ -125,12 +125,12 @@
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/Pet"
+                    "$ref": "#/components/schemas/Client"
                   }
                 },
                 "application/xml": {
                   "schema": {
-                    "$ref": "#/components/schemas/Pet"
+                    "$ref": "#/components/schemas/Client"
                   }
                 }
               }
@@ -145,26 +145,26 @@
           "security": [
             {
               "petstore_auth": [
-                "write:pets",
-                "read:pets"
+                "write:clients",
+                "read:clients"
               ]
             }
           ]
         }
       },
-      "/pet/findByStatus": {
+      "/client/findByStatus": {
         "get": {
           "tags": [
-            "pet"
+            "client"
           ],
-          "summary": "Finds Pets by status",
-          "description": "Multiple status values can be provided with comma separated strings",
-          "operationId": "findPetsByStatus",
+          "summary": "Trouver les clients en fonction de leur statut",
+          "description": "Plusieurs statuts peuvent être donnés avec la virgule séparée par une chaîne de caractère.",
+          "operationId": "findClientsByStatus",
           "parameters": [
             {
               "name": "status",
               "in": "query",
-              "description": "Status values that need to be considered for filter",
+              "description": "Valeur du statut qui a besoin d'être filtrée",
               "required": false,
               "explode": true,
               "schema": {
@@ -186,7 +186,7 @@
                   "schema": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/Pet"
+                      "$ref": "#/components/schemas/Client"
                     }
                   }
                 },
@@ -194,7 +194,7 @@
                   "schema": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/Pet"
+                      "$ref": "#/components/schemas/Client"
                     }
                   }
                 }
@@ -207,8 +207,8 @@
           "security": [
             {
               "petstore_auth": [
-                "write:pets",
-                "read:pets"
+                "write:clients",
+                "read:clients"
               ]
             }
           ]
