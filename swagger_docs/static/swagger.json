@@ -2,25 +2,16 @@
     "openapi": "3.0.3",
     "info": {
       "title": "Documentation supervisemaconduite - OpenAPI 3.0",
-      "description": "Les préréquis se focalisent uniquement sur une bonne compréhention du language python et des données de type Json",
+      "description": "Les prérequis se focalisent uniquement sur une bonne compréhension du langage python et des données de type Json.",
     
       "contact": {
         "email": "michelsadeungakou@gmail.com"
       }
     },
-    "servers": [
-      {
-        "url": "https://petstore3.swagger.io/api/v3"
-      }
-    ],
     "tags": [
       {
-        "name": "pet",
-        "description": "Everything about your Pets",
-        "externalDocs": {
-          "description": "Find out more",
-          "url": "http://swagger.io"
-        }
+        "name": "client",
+        "description": "Tout à propos des clients"
       },
       {
         "name": "store",
@@ -36,30 +27,30 @@
       }
     ],
     "paths": {
-      "/pet": {
+      "/client": {
         "put": {
           "tags": [
-            "pet"
+            "client"
           ],
-          "summary": "Update an existing pet",
-          "description": "Update an existing pet by Id",
-          "operationId": "updatePet",
+          "summary": "Mettre à jour les données du client",
+          "description": "Mettre à jour les données du client par Id",
+          "operationId": "updateclient",
           "requestBody": {
-            "description": "Update an existent pet in the store",
+            "description": "Mettre à jour les données du client dans la base de données",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "$ref": "#/components/schemas/Client"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "$ref": "#/components/schemas/Client"
                 }
               },
               "application/x-www-form-urlencoded": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "$ref": "#/components/schemas/Client"
                 }
               }
             },
@@ -71,12 +62,12 @@
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/Pet"
+                    "$ref": "#/components/schemas/Client"
                   }
                 },
                 "application/xml": {
                   "schema": {
-                    "$ref": "#/components/schemas/Pet"
+                    "$ref": "#/components/schemas/Client"
                   }
                 }
               }
@@ -85,7 +76,7 @@
               "description": "Invalid ID supplied"
             },
             "404": {
-              "description": "Pet not found"
+              "description": "Client not found"
             },
             "422": {
               "description": "Validation exception"
@@ -94,8 +85,8 @@
           "security": [
             {
               "petstore_auth": [
-                "write:pets",
-                "read:pets"
+                "write:clients",
+                "read:clients"
               ]
             }
           ]
