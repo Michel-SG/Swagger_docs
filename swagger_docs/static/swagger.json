@@ -15,15 +15,11 @@
       },
       {
         "name": "store",
-        "description": "Access to Petstore orders",
-        "externalDocs": {
-          "description": "Find out more about our store",
-          "url": "http://swagger.io"
-        }
+        "description": "Accéder à la commande"
       },
       {
         "name": "user",
-        "description": "Operations about user"
+        "description": "Operation sur l'utilisateur"
       }
     ],
     "paths": {
