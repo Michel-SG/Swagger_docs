@@ -273,19 +273,19 @@
           ]
         }
       },
-      "/pet/{petId}": {
+      "/client/{clientId}": {
         "get": {
           "tags": [
-            "pet"
+            "client"
           ],
-          "summary": "Find pet by ID",
-          "description": "Returns a single pet",
-          "operationId": "getPetById",
+          "summary": "Trouver le client par l'ID",
+          "description": "Retourner un seul client",
+          "operationId": "getClientById",
           "parameters": [
             {
-              "name": "petId",
+              "name": "clientId",
               "in": "path",
-              "description": "ID of pet to return",
+              "description": "ID du client à retourner",
               "required": true,
               "schema": {
                 "type": "integer",
@@ -299,12 +299,12 @@
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/Pet"
+                    "$ref": "#/components/schemas/Client"
                   }
                 },
                 "application/xml": {
                   "schema": {
-                    "$ref": "#/components/schemas/Pet"
+                    "$ref": "#/components/schemas/client"
                   }
                 }
               }
@@ -313,7 +313,7 @@
               "description": "Invalid ID supplied"
             },
             "404": {
-              "description": "Pet not found"
+              "description": "Client not found"
             }
           },
           "security": [
@@ -322,8 +322,8 @@
             },
             {
               "petstore_auth": [
-                "write:pets",
-                "read:pets"
+                "write:clients",
+                "read:clients"
               ]
             }
           ]
